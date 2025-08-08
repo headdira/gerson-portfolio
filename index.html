@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerson Moreira - Soluções de TI Estratégicas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1c1917; /* bg-stone-900 */
+            color: #e7e5e4; /* text-stone-200 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #38bdf8); /* from-teal-400 to-sky-400 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12;
+        }
+        .card {
+            @apply bg-stone-950/70 rounded-lg border border-stone-800 shadow-lg transition-all duration-300 overflow-hidden flex flex-col;
+            border-top: 3px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #52525b; /* border-stone-600 */
+            border-top-color: #2dd4bf; /* border-teal-400 */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .tech-icon {
+            @apply h-12 w-12 md:h-14 md:w-14 object-contain transition-all duration-300;
+        }
+        .tech-icon-wrapper:hover .tech-icon {
+            filter: drop-shadow(0 0 8px rgba(45, 212, 191, 0.5));
+        }
+        .btn-primary {
+            @apply bg-teal-500 text-stone-900 font-bold rounded-lg transition-all duration-300;
+        }
+        .btn-primary:hover {
+            background-color: #2dd4bf; /* hover:bg-teal-400 */
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
+            transform: scale(1.05);
+        }
+        .form-input {
+            @apply w-full bg-stone-800 border border-stone-700 rounded-lg py-3 px-4 text-stone-200 focus:outline-none focus:ring-2 focus:ring-teal-400 transition-all;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-[#1c1917]/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Gerson Moreira</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#processo" class="hover:text-teal-400 transition-colors">Meu Processo</a>
+                <a href="#servicos" class="hover:text-teal-400 transition-colors">Serviços</a>
+                <a href="#portfolio" class="hover:text-teal-400 transition-colors">Portfolio</a>
+                <a href="#contato" class="hover:text-teal-400 transition-colors">Contato</a>
+            </nav>
+            <a href="#contato" class="hidden md:inline-block py-2 px-5 btn-primary">
+                Vamos Conversar
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Soluções de TI que Geram 
+                    <span class="gradient-text">Resultados Reais</span>
+                </h1>
+                <p class="text-lg md:text-xl text-stone-300 max-w-3xl mx-auto mb-8">
+                    Não sou um profissional genérico. Eu mergulho no seu negócio para encontrar a causa raiz dos problemas e construir soluções práticas e inovadoras que impulsionam seu crescimento.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="#contato" class="py-3 px-8 btn-primary">
+                        Fale Comigo
+                    </a>
+                    <a href="https://github.com/headdira" target="_blank" class="bg-stone-700 hover:bg-stone-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
+                        Ver GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="processo" class="py-20 bg-stone-950/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-white">Meu Diferencial: O Processo é a Chave</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-stone-900 p-8 rounded-xl border border-stone-800">
+                        <div class="flex items-center justify-center mb-4 w-16 h-16 mx-auto bg-teal-900/50 text-teal-400 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">1. Diagnóstico</h3>
+                        <p class="text-stone-300">Primeiro, ouvimos e entendemos seu problema. Com base nisso, mergulhamos fundo para encontrar a verdadeira causa, não apenas os sintomas.</p>
+                    </div>
+                    <div class="bg-stone-900 p-8 rounded-xl border border-stone-800">
+                        <div class="flex items-center justify-center mb-4 w-16 h-16 mx-auto bg-teal-900/50 text-teal-400 rounded-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">2. Pesquisa e Cura</h3>
+                        <p class="text-stone-300">Procuramos a "cura" através de pesquisa e análise de dados. Nem tudo é um sistema; a solução pode ser uma automação simples e eficaz.</p>
+                    </div>
+                    <div class="bg-stone-900 p-8 rounded-xl border border-stone-800">
+                        <div class="flex items-center justify-center mb-4 w-16 h-16 mx-auto bg-teal-900/50 text-teal-400 rounded-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-white">3. Implementação</h3>
+                        <p class="text-stone-300">Implementamos a solução mais adequada, de forma cirúrgica e focada no resultado, garantindo que ela realmente agregue valor à sua empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-white">Serviços que se Destacam</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Chatbots com IA</h3>
+                        <p class="text-sm text-stone-300 mt-1">Atenda mais clientes com qualidade e automação.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Integrações com IoT</h3>
+                        <p class="text-sm text-stone-300 mt-1">Para telecomunicações e rastreamento em geral.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Criação de APIs</h3>
+                        <p class="text-sm text-stone-300 mt-1">Desenvolvimento e consumo de APIs RESTful robustas.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Automação Google</h3>
+                        <p class="text-sm text-stone-300 mt-1">Scripts para planilhas, docs e relatórios avançados.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Gestão de Banco de Dados</h3>
+                        <p class="text-sm text-stone-300 mt-1">Criação e manutenção para seus dados valiosos.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Sistemas Web Completos</h3>
+                        <p class="text-sm text-stone-300 mt-1">Soluções de gestão para empresas, escolas, etc.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">Sistemas Desktop</h3>
+                        <p class="text-sm text-stone-300 mt-1">Para bipagem, impressão de notas e QR codes.</p>
+                    </div>
+                     <div class="bg-stone-900 p-6 rounded-lg border border-stone-800 shadow-lg text-center">
+                        <h3 class="text-lg font-bold text-teal-400">E muito mais...</h3>
+                        <p class="text-sm text-stone-300 mt-1">Soluções únicas para problemas únicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-stone-950/50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-white">Cases de Sucesso</h2>
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Case 1: Chatbot com Gráfico -->
+                    <div class="card">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold text-white mb-2">Chatbot para Loovi Seguros</h3>
+                            <p class="text-teal-400 font-semibold mb-4">Aumento de 830% na capacidade de atendimento</p>
+                            <p class="text-stone-300 mb-6 flex-grow">A empresa enfrentava um alto fluxo de atendimentos repetitivos. Criamos um chatbot com IA, um novo canal de atendimento totalmente treinável, que resolveu as dúvidas recorrentes dos clientes de forma automática.</p>
+                            
+                            <div class="mt-auto">
+                                <h4 class="font-semibold text-white mb-3">Atendimentos Diários</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center">
+                                        <span class="w-16 text-sm text-stone-400">Antes</span>
+                                        <div class="flex-1 bg-stone-700 rounded-full h-6">
+                                            <div class="bg-stone-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 10%;">150</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <span class="w-16 text-sm text-stone-400">Depois</span>
+                                        <div class="flex-1 bg-stone-700 rounded-full h-6">
+                                            <div class="bg-teal-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 100%;">1400+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case 2: Disparador com Vídeo -->
+                    <div class="card">
+                        <div class="video-responsive bg-stone-800">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold text-white mb-2">Disparador WhatsApp para Drive Safe</h3>
+                            <p class="text-teal-400 font-semibold mb-4">Redução de 20% na inadimplência</p>
+                            <p class="text-stone-300 mb-4 flex-grow">Desenvolvemos um sistema para envio de mensagens em massa, permitindo personalizar nome e mensagem. A Drive Safe usou a ferramenta para cobrar clientes inadimplentes oferecendo descontos.</p>
+                            <div class="mt-auto pt-4 border-t border-stone-700">
+                                <p class="text-stone-400"><span class="font-bold text-white">Resultado:</span> Recuperaram mais de R$ 4 mil em dívidas esquecidas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case 3: Site com Print e Link -->
+                    <div class="card">
+                        <img src="https://placehold.co/600x400/1c1917/e7e5e4?text=Print+do+Projeto" alt="Demonstração do site da Drive Safe" class="w-full h-auto">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold text-white mb-2">Site Institucional para Drive Safe</h3>
+                            <p class="text-teal-400 font-semibold mb-4">Fortalecimento da presença digital</p>
+                            <p class="text-stone-300 mb-4 flex-grow">Criação de uma landing page objetiva para apresentar a empresa, seus serviços e vantagens, funcionando como pilar central para a comunicação da marca.</p>
+                            <div class="mt-auto pt-4">
+                                <a href="#" target="_blank" class="w-full text-center py-2 px-4 btn-primary">
+                                    Ver Projeto Ao Vivo <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="text-center text-stone-400 mt-12 text-sm italic">
+                    * Por questões de privacidade e confidencialidade, os projetos exibidos são demonstrações que refletem o escopo e a qualidade do trabalho real implementado nas empresas parceiras.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Technologies Section -->
+        <section id="tech" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-white">Tecnologias e Ferramentas</h2>
+                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-8 md:gap-x-12">
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" class="tech-icon mx-auto mb-2"/><p class="text-sm">Python</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="Django" class="tech-icon mx-auto mb-2" style="filter: invert(1);"/><p class="text-sm">Django</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask" class="tech-icon mx-auto mb-2" style="filter: invert(1);"/><p class="text-sm">Flask</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP" class="tech-icon mx-auto mb-2"/><p class="text-sm">PHP</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" class="tech-icon mx-auto mb-2"/><p class="text-sm">Node.js</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" class="tech-icon mx-auto mb-2"/><p class="text-sm">React</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon mx-auto mb-2"/><p class="text-sm">HTML5</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon mx-auto mb-2"/><p class="text-sm">CSS3</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="tech-icon mx-auto mb-2"/><p class="text-sm">Tailwind CSS</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="tech-icon mx-auto mb-2" style="filter: invert(1);"/><p class="text-sm">AWS</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="Google Cloud" class="tech-icon mx-auto mb-2"/><p class="text-sm">Google Cloud</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="Firebase" class="tech-icon mx-auto mb-2"/><p class="text-sm">Firebase</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="SQL" class="tech-icon mx-auto mb-2"/><p class="text-sm">SQL</p></div>
+                    <div class="text-center tech-icon-wrapper"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" class="tech-icon mx-auto mb-2"/><p class="text-sm">Git</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-20 bg-stone-950/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Vamos transformar seu desafio em resultado?</h2>
+                    <p class="text-lg text-stone-300 mb-8 max-w-2xl mx-auto">Se você tem um problema complexo e busca uma solução inteligente e definitiva, estou pronto para ajudar. Preencha o formulário abaixo.</p>
+                </div>
+                <div class="max-w-xl mx-auto bg-stone-900 p-8 rounded-lg border border-stone-800">
+                    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                        <div class="mb-5">
+                            <label for="name" class="block text-stone-300 text-sm font-bold mb-2">Seu Nome</label>
+                            <input type="text" name="name" id="name" required class="form-input">
+                        </div>
+                        <div class="mb-5">
+                            <label for="email" class="block text-stone-300 text-sm font-bold mb-2">Seu E-mail</label>
+                            <input type="email" name="email" id="email" required class="form-input">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-stone-300 text-sm font-bold mb-2">Sua Mensagem</label>
+                            <textarea name="message" id="message" rows="5" required class="form-input"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full py-3 px-8 btn-primary">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20">
+        <div class="container mx-auto px-6 py-6 text-center text-stone-400">
+            <p>&copy; 2025 Gerson Moreira. Todos os direitos reservados.</p>
+            <p class="text-sm mt-1">Criado para resolver problemas, não apenas para escrever código.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
