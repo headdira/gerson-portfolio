@@ -33,19 +33,21 @@
         }
         .card {
             @apply bg-stone-950/70 rounded-lg border border-stone-800 shadow-lg transition-all duration-300 overflow-hidden flex flex-col;
-            border-top: 3px solid transparent;
         }
-        .card:hover {
+        .project-card {
+             @apply bg-stone-900/80 p-8 rounded-2xl border border-stone-800 transition-all duration-300;
+        }
+        .project-card:hover {
             transform: translateY(-5px);
-            border-color: #52525b; /* border-stone-600 */
-            border-top-color: #2dd4bf; /* border-teal-400 */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.1), 0 4px 6px -2px rgba(45, 212, 191, 0.05);
+            border-color: #52525b;
         }
         .video-responsive {
             overflow: hidden;
             padding-bottom: 56.25%;
             position: relative;
             height: 0;
+            @apply rounded-lg;
         }
         .video-responsive iframe {
             left: 0;
@@ -83,6 +85,7 @@
                 <a href="#processo" class="hover:text-teal-400 transition-colors">Meu Processo</a>
                 <a href="#servicos" class="hover:text-teal-400 transition-colors">Serviços</a>
                 <a href="#portfolio" class="hover:text-teal-400 transition-colors">Portfolio</a>
+                <a href="#github" class="hover:text-teal-400 transition-colors">GitHub</a>
                 <a href="#contato" class="hover:text-teal-400 transition-colors">Contato</a>
             </nav>
             <a href="#contato" class="hidden md:inline-block py-2 px-5 btn-primary">
@@ -93,7 +96,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="py-20 md:py-32">
+        <section id="hero" class="py-20 md:py-24">
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
                     Soluções de TI que Geram 
@@ -109,6 +112,20 @@
                     <a href="https://github.com/headdira" target="_blank" class="bg-stone-700 hover:bg-stone-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
                         Ver GitHub
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trusted by Section -->
+        <section id="empresas" class="pb-20">
+            <div class="container mx-auto px-6">
+                <h3 class="text-center text-stone-400 font-semibold uppercase tracking-wider mb-8">Empresas que confiam no meu trabalho</h3>
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+                    <!-- Substitua os placeholders pelos logos reais -->
+                    <img src="./img/logo2.png" alt="Logo Loovi Seguros" class="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./img/logo1.png" alt="Logo Drive Safe" class="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./img/logo3.png" alt="Logo Cliente 3" class="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
+                    <img src="./img/logo4.png" alt="Logo Cliente 4" class="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
                 </div>
             </div>
         </section>
@@ -188,74 +205,85 @@
         <section id="portfolio" class="py-20 bg-stone-950/50">
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-white">Cases de Sucesso</h2>
-                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="space-y-16">
                     
-                    <!-- Case 1: Chatbot com Gráfico -->
-                    <div class="card">
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Chatbot para Loovi Seguros</h3>
+                    <!-- Case 1: Chatbot Loovi -->
+                    <div class="project-card grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl font-bold text-white mb-2">Chatbot para Loovi Seguros</h3>
+                            <img src="./img/logo2.png" alt="Logo Loovi Seguros" class="h-10 md:h-12 object-contain grayscale hover:grayscale-0 transition-all duration-300 cursor-pointer">
                             <p class="text-teal-400 font-semibold mb-4">Aumento de 830% na capacidade de atendimento</p>
-                            <p class="text-stone-300 mb-6 flex-grow">A empresa enfrentava um alto fluxo de atendimentos repetitivos. Criamos um chatbot com IA, um novo canal de atendimento totalmente treinável, que resolveu as dúvidas recorrentes dos clientes de forma automática.</p>
-                            
-                            <div class="mt-auto">
-                                <h4 class="font-semibold text-white mb-3">Atendimentos Diários</h4>
-                                <div class="space-y-3">
-                                    <div class="flex items-center">
-                                        <span class="w-16 text-sm text-stone-400">Antes</span>
-                                        <div class="flex-1 bg-stone-700 rounded-full h-6">
-                                            <div class="bg-stone-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 10%;">150</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <span class="w-16 text-sm text-stone-400">Depois</span>
-                                        <div class="flex-1 bg-stone-700 rounded-full h-6">
-                                            <div class="bg-teal-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 100%;">1400+</div>
-                                        </div>
-                                    </div>
+                            <p class="text-stone-300 mb-6">A empresa enfrentava um alto fluxo de atendimentos repetitivos. Criamos um chatbot com IA, um novo canal de atendimento totalmente treinável, que resolveu as dúvidas recorrentes dos clientes de forma automática.</p>
+                            <h4 class="font-semibold text-white mb-3">Gráfico de Insights: Atendimentos Diários</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <span class="w-16 text-sm text-stone-400">Antes</span>
+                                    <div class="flex-1 bg-stone-700 rounded-full h-6"><div class="bg-stone-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 10%;">150</div></div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-16 text-sm text-stone-400">Depois</span>
+                                    <div class="flex-1 bg-stone-700 rounded-full h-6"><div class="bg-teal-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 100%;">1400+</div></div>
                                 </div>
                             </div>
                         </div>
+                        <div class="space-y-6">
+                            <img src="./img/project1.png" alt="Print do Chatbot" class="rounded-lg shadow-lg w-full">
+                            <div class="video-responsive bg-stone-800">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/yuGQZreZjVE?si=JqCYkqwk0ow8eRy9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Case 2: Disparador com Vídeo -->
-                    <div class="card">
-                        <div class="video-responsive bg-stone-800">
-                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Disparador WhatsApp para Drive Safe</h3>
+                    <!-- Case 2: Disparador WhatsApp -->
+                    <div class="project-card grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-3xl font-bold text-white mb-2">Disparador WhatsApp para Drive Safe</h3>
                             <p class="text-teal-400 font-semibold mb-4">Redução de 20% na inadimplência</p>
-                            <p class="text-stone-300 mb-4 flex-grow">Desenvolvemos um sistema para envio de mensagens em massa, permitindo personalizar nome e mensagem. A Drive Safe usou a ferramenta para cobrar clientes inadimplentes oferecendo descontos.</p>
-                            <div class="mt-auto pt-4 border-t border-stone-700">
-                                <p class="text-stone-400"><span class="font-bold text-white">Resultado:</span> Recuperaram mais de R$ 4 mil em dívidas esquecidas.</p>
+                            <p class="text-stone-300 mb-6">Desenvolvemos um sistema para envio de mensagens em massa, permitindo personalizar nome e mensagem. A Drive Safe usou a ferramenta para cobrar clientes inadimplentes oferecendo descontos, recuperando mais de R$ 4 mil.</p>
+                            <h4 class="font-semibold text-white mb-3">Gráfico de Insights: Taxa de Inadimplência</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <span class="w-24 text-sm text-stone-400">Inadimplência</span>
+                                    <div class="flex-1 bg-stone-700 rounded-full h-6"><div class="bg-red-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-center" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="w-24 text-sm text-stone-400">Redução</span>
+                                    <div class="flex-1 bg-stone-700 rounded-full h-6"><div class="bg-teal-500 h-6 rounded-full text-right pr-2 text-xs font-bold flex items-center justify-end" style="width: 80%;">-20%</div></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Case 3: Site com Print e Link -->
-                    <div class="card">
-                        <img src="https://placehold.co/600x400/1c1917/e7e5e4?text=Print+do+Projeto" alt="Demonstração do site da Drive Safe" class="w-full h-auto">
-                        <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-white mb-2">Site Institucional para Drive Safe</h3>
-                            <p class="text-teal-400 font-semibold mb-4">Fortalecimento da presença digital</p>
-                            <p class="text-stone-300 mb-4 flex-grow">Criação de uma landing page objetiva para apresentar a empresa, seus serviços e vantagens, funcionando como pilar central para a comunicação da marca.</p>
-                            <div class="mt-auto pt-4">
-                                <a href="#" target="_blank" class="w-full text-center py-2 px-4 btn-primary">
-                                    Ver Projeto Ao Vivo <i class="fas fa-external-link-alt ml-2"></i>
-                                </a>
-                            </div>
+                        <div class="space-y-6">
+                            <img src="./img/projetct2.png" alt="Print do Sistema de Disparo" class="rounded-lg shadow-lg w-full">
                         </div>
                     </div>
 
                 </div>
-                <p class="text-center text-stone-400 mt-12 text-sm italic">
+                <p class="text-center text-stone-400 mt-16 text-sm italic">
                     * Por questões de privacidade e confidencialidade, os projetos exibidos são demonstrações que refletem o escopo e a qualidade do trabalho real implementado nas empresas parceiras.
                 </p>
             </div>
         </section>
+
+        <!-- GitHub Section -->
+        <section id="github" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-white">Projetos no GitHub</h2>
+                <div id="github-repos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Repositories will be injected here by JavaScript -->
+                    <div id="loader" class="text-center col-span-full">
+                        <p class="text-teal-400">Carregando projetos...</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                     <a href="https://github.com/headdira" target="_blank" class="py-3 px-8 btn-primary">
+                        Ver todos os projetos no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
         
         <!-- Technologies Section -->
-        <section id="tech" class="py-20">
+        <section id="tech" class="py-20 bg-stone-950/50">
             <div class="container mx-auto px-6">
                 <h2 class="section-title text-white">Tecnologias e Ferramentas</h2>
                 <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-8 md:gap-x-12">
@@ -285,7 +313,7 @@
                     <p class="text-lg text-stone-300 mb-8 max-w-2xl mx-auto">Se você tem um problema complexo e busca uma solução inteligente e definitiva, estou pronto para ajudar. Preencha o formulário abaixo.</p>
                 </div>
                 <div class="max-w-xl mx-auto bg-stone-900 p-8 rounded-lg border border-stone-800">
-                    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                    <form action="https://formspree.io/f/xkgzpawe" method="POST">
                         <div class="mb-5">
                             <label for="name" class="block text-stone-300 text-sm font-bold mb-2">Seu Nome</label>
                             <input type="text" name="name" id="name" required class="form-input">
@@ -316,6 +344,51 @@
             <p class="text-sm mt-1">Criado para resolver problemas, não apenas para escrever código.</p>
         </div>
     </footer>
+
+    <!-- GitHub Fetch Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reposContainer = document.getElementById('github-repos');
+            const loader = document.getElementById('loader');
+            const username = 'headdira';
+            
+            // Fetches repositories from GitHub API
+            async function getRepos() {
+                try {
+                    const response = await fetch(`https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const repos = await response.json();
+                    
+                    loader.style.display = 'none'; // Hide loader
+                    
+                    repos.forEach(repo => {
+                        const repoCard = `
+                            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="card p-6 block hover:border-teal-400 hover:!scale-105">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h3 class="font-bold text-xl text-white">${repo.name}</h3>
+                                    ${repo.language ? `<span class="bg-teal-900/50 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">${repo.language}</span>` : ''}
+                                </div>
+                                <p class="text-stone-400 text-sm flex-grow mb-4">${repo.description || 'Sem descrição.'}</p>
+                                <div class="flex items-center text-sm text-stone-500 mt-auto">
+                                    <i class="fas fa-star mr-1"></i> ${repo.stargazers_count}
+                                    <i class="fas fa-code-branch ml-4 mr-1"></i> ${repo.forks_count}
+                                </div>
+                            </a>
+                        `;
+                        reposContainer.innerHTML += repoCard;
+                    });
+
+                } catch (error) {
+                    loader.innerHTML = '<p class="text-red-400">Não foi possível carregar os projetos do GitHub.</p>';
+                    console.error("Fetch error:", error);
+                }
+            }
+
+            getRepos();
+        });
+    </script>
 
 </body>
 </html>
